@@ -27,6 +27,7 @@ public:
 	int grounding;
 	int haste;
 	int constitution;
+	float rage;
 
 protected:
 	// Called when the game starts or when spawned
