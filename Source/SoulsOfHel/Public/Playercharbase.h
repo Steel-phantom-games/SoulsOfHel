@@ -27,6 +27,7 @@ public:
 	int grounding;
 	int haste;
 	int constitution;
+	int experience;
 
 protected:
 	// Called when the game starts or when spawned
@@ -43,5 +44,8 @@ public:
 
 	//use the standard damage integration in order to communicate with blueprints correctly
 	void ReceiveAnyDamage(float Damage, const UDamageType, AController, AActor);
+
+	//death event
+	void Death();
 
 };

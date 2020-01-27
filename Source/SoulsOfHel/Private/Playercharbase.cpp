@@ -35,5 +35,15 @@ void APlayercharbase::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 // Damage Taken Logic
 void APlayercharbase::ReceiveAnyDamage(float Damage, const class UDamageType, class AController, AActor)
 {
-	health = health - Damage
+	health = health - Damage;
+	if (health <= 0)
+	{
+		Death()
+	};
+	
+}
+
+// death logic
+void APlayercharbase::Death()
+{
 }
