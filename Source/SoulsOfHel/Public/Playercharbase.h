@@ -39,4 +39,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	
+
+	//use the standard damage integration in order to communicate with blueprints correctly
+	void ReceiveAnyDamage(float Damage, const UDamageType, AController, AActor);
+
 };
