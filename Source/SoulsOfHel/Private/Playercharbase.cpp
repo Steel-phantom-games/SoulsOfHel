@@ -38,7 +38,7 @@ void APlayercharbase::ReceiveAnyDamage(float Damage, const class UDamageType, cl
 	health = health - Damage;
 	if (health <= 0)
 	{
-		Death()
+		Death();
 	};
 	
 }
