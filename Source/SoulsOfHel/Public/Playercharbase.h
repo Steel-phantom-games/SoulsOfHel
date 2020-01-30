@@ -28,10 +28,13 @@ public:
 	int haste;
 	int constitution;
 	float rage;
+	int experience;
+
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
 
 public:	
 	// Called every frame
@@ -39,5 +42,13 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	
+
+	//use the standard damage integration in order to communicate with blueprints correctly
+	void ReceiveAnyDamage(float Damage, const UDamageType, AController, AActor);
+
+	//death event
+	void Death();
 
 };
